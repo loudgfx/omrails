@@ -1,3 +1,10 @@
+<% if user_signed_in? %>
+<div class="hero-unit">
+	Welcome to my Member Area Bitch!
+</div>
+
+<%else%>
+
 <div class="hero-unit">
 <h1>Welcome To Moetorest</h1>
 <p>
@@ -5,7 +12,9 @@ Welcome to my pintorest copy!
 </p>
 
 <p>
-	<%= link_to "Sign Up Now", "#", class: "btn btn-primary btn-large" %>
+	<%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-primary btn-large" %>
 </p>
 </div>
+
+<%end%>
 
